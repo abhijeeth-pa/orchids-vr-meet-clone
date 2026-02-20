@@ -1,0 +1,295 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.08 0.02 270);
+  --foreground: oklch(0.96 0.01 270);
+  --card: oklch(0.12 0.03 270);
+  --card-foreground: oklch(0.96 0.01 270);
+  --popover: oklch(0.12 0.03 270);
+  --popover-foreground: oklch(0.96 0.01 270);
+  --primary: oklch(0.65 0.28 280);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.18 0.04 270);
+  --secondary-foreground: oklch(0.96 0.01 270);
+  --muted: oklch(0.18 0.04 270);
+  --muted-foreground: oklch(0.6 0.05 270);
+  --accent: oklch(0.22 0.06 270);
+  --accent-foreground: oklch(0.96 0.01 270);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.25 0.05 270);
+  --input: oklch(0.2 0.04 270);
+  --ring: oklch(0.65 0.28 280);
+  --chart-1: oklch(0.65 0.28 280);
+  --chart-2: oklch(0.6 0.22 200);
+  --chart-3: oklch(0.7 0.2 160);
+  --chart-4: oklch(0.75 0.22 120);
+  --chart-5: oklch(0.65 0.24 40);
+  --sidebar: oklch(0.1 0.03 270);
+  --sidebar-foreground: oklch(0.96 0.01 270);
+  --sidebar-primary: oklch(0.65 0.28 280);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.18 0.04 270);
+  --sidebar-accent-foreground: oklch(0.96 0.01 270);
+  --sidebar-border: oklch(0.25 0.05 270);
+  --sidebar-ring: oklch(0.65 0.28 280);
+
+  /* VR Theme Colors */
+  --vr-purple: #7c3aed;
+  --vr-cyan: #06b6d4;
+  --vr-blue: #3b82f6;
+  --vr-pink: #ec4899;
+  --vr-glow: rgba(124, 58, 237, 0.4);
+}
+
+.dark {
+  --background: oklch(0.08 0.02 270);
+  --foreground: oklch(0.96 0.01 270);
+  --card: oklch(0.12 0.03 270);
+  --card-foreground: oklch(0.96 0.01 270);
+  --popover: oklch(0.12 0.03 270);
+  --popover-foreground: oklch(0.96 0.01 270);
+  --primary: oklch(0.65 0.28 280);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.18 0.04 270);
+  --secondary-foreground: oklch(0.96 0.01 270);
+  --muted: oklch(0.18 0.04 270);
+  --muted-foreground: oklch(0.6 0.05 270);
+  --accent: oklch(0.22 0.06 270);
+  --accent-foreground: oklch(0.96 0.01 270);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.25 0.05 270);
+  --input: oklch(0.2 0.04 270);
+  --ring: oklch(0.65 0.28 280);
+  --chart-1: oklch(0.65 0.28 280);
+  --chart-2: oklch(0.6 0.22 200);
+  --chart-3: oklch(0.7 0.2 160);
+  --chart-4: oklch(0.75 0.22 120);
+  --chart-5: oklch(0.65 0.24 40);
+  --sidebar: oklch(0.1 0.03 270);
+  --sidebar-foreground: oklch(0.96 0.01 270);
+  --sidebar-primary: oklch(0.65 0.28 280);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.18 0.04 270);
+  --sidebar-accent-foreground: oklch(0.96 0.01 270);
+  --sidebar-border: oklch(0.25 0.05 270);
+  --sidebar-ring: oklch(0.65 0.28 280);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: #080a14;
+  }
+}
+
+/* VR Glow effects */
+.vr-glow {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5), 0 0 60px rgba(124, 58, 237, 0.2);
+}
+
+.vr-glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5), 0 0 60px rgba(6, 182, 212, 0.2);
+}
+
+.vr-border {
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  background: rgba(124, 58, 237, 0.05);
+}
+
+.vr-glass {
+  background: rgba(10, 10, 20, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(124, 58, 237, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.video-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0d0f1a;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  transition: all 0.3s ease;
+}
+
+.video-tile:hover {
+  border-color: rgba(124, 58, 237, 0.8);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+}
+
+.video-tile.speaking {
+  border-color: #06b6d4;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  background: rgba(124, 58, 237, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+  background: rgba(124, 58, 237, 0.3);
+  border-color: rgba(124, 58, 237, 0.8);
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+  transform: scale(1.05);
+}
+
+.control-btn.active {
+  background: #7c3aed;
+  border-color: #9f7aea;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+}
+
+.control-btn.danger {
+  background: rgba(220, 38, 38, 0.2);
+  border-color: rgba(220, 38, 38, 0.5);
+}
+
+.control-btn.danger:hover {
+  background: rgba(220, 38, 38, 0.8);
+  border-color: #ef4444;
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
+}
+
+.control-btn.vr-active {
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  border-color: #06b6d4;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+}
+
+/* Chat */
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 85%;
+}
+
+.chat-message.own {
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  margin-left: auto;
+}
+
+.chat-message.other {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.4);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.8);
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
