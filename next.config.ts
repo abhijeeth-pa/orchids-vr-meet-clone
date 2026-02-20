@@ -5,6 +5,7 @@ import path from "node:path";
 const loaderPath = require.resolve('orchids-visual-edits/loader.js');
 
 const nextConfig: NextConfig = {
+  transpilePackages: ["three", "@react-three/fiber", "@react-three/drei"],
   images: {
     remotePatterns: [
       {
